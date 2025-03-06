@@ -1,6 +1,6 @@
 
 interface SettingsProps {
-setPadding: (value: number) => void;
+    setPadding: (value: number) => void;
     setShadow: (value: number) => void;
     setRadius: (value: number) => void;
     setFile: (value: File | null) => void;

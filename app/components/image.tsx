@@ -7,9 +7,13 @@ interface ImageProps {
 export default function Image({padding, shadow, radius, file}: ImageProps) {
 
     return(
-        <div className="flex flex-col items-center justify-center  bg-gray-100">
-            {file ? <img src={URL.createObjectURL(file)} style={{padding: `${padding}px`, boxShadow: `0 0 ${shadow}px black`, borderRadius: `${radius}px`}} /> : <h1>Choose a file</h1>}
-        </div>
+        <>
+            {file ? 
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', padding: `${padding}px`, height: '50vh', width: '50vw'}}> 
+                <img src={URL.createObjectURL(file)} style={{ boxShadow: `0 0 ${shadow}px black`, borderRadius: `${radius}px`}} /> 
+            </div>
+            : <h1>Choose a file</h1>}
+        </>
         
     );
 }

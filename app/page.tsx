@@ -11,9 +11,10 @@ export default function Home() {
   const [file, setFile] = useState<File | null>(null);
 console.log(padding, shadow, radius, file);
   return (
-  <>
+  <div className="flex flex-col items-center justify-center h-100vh">
     <Settings setRadius={setRadius} setShadow={setShadow} setPadding={setPadding} setFile={setFile}  />
     <Image radius={radius} shadow={shadow} padding={padding} file={file}/>
-  </>
+  </div>
+  
   );
 }
